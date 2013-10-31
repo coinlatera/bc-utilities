@@ -6,7 +6,7 @@
     "Matthis <matthis.perrin@gmail.com>"
   ],
   "description": "A collection of utility functions for reuse across all Buttercoin projects",
-  "main": "main.js",
+  "main": "dist/bc-utilities-min.js",
   "keywords": [
     "buttercoin",
     "utility",
@@ -18,10 +18,11 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "assets",
+    "test-app"
   ],
   "dependencies": {
-    "coffee-script": "~1.6.3",
-    "bootstrap": "~3.0.1"
+    "coffee-script": "~1.6.3"
   }
 }
