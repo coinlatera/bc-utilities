@@ -1,4 +1,7 @@
-type = (obj) ->
+root = exports ? this
+
+
+root.type = (obj) ->
   if obj == undefined or obj == null
     return String obj
 
@@ -16,10 +19,11 @@ type = (obj) ->
   return classToType[Object.prototype.toString.call(obj)]
 
 
-exist = (obj) ->
+root.exist = (obj) ->
   if typeof obj is 'undefined' or obj is null or obj == undefined
     return false
   return true
 
-number = (n) ->
+
+root.number = (n) ->
   return !isNaN(parseFloat(n)) && isFinite(n)
