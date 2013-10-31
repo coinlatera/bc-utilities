@@ -19,5 +19,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "coffee-script": "~1.6.3",
+    "bootstrap": "~3.0.1"
+  }
 }
