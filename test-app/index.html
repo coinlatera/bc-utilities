@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <script src="../dist/bc-utilities-min.js"></script>
+  </head>
+  <body>
+    <div id="result"></div>
+
+    <script>
+      var foo = 1;
+      var bar;
+      var baz = undefined;
+      var qux = null;
+      var banana = void 0;
+
+      var result = ''
+
+      function testVariable (variable) {
+        result += exist(variable) ? '<span>Exist</span>' : '<span>Doesn\'t exist</span>';
+        result += '<br>'
+      }
+
+      testVariable(foo);
+      testVariable(bar);
+      testVariable(baz);
+      testVariable(qux);
+      testVariable(banana);
+      testVariable();
+
+      document.getElementById('result').innerHTML = result;
+
+    </script>
+
+  </body>
+</html>
