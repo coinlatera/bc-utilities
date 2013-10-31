@@ -1,0 +1,23 @@
+{
+  "name": "bc-utilities",
+  "version": "0.0.1",
+  "homepage": "https://github.com/buttercoin/bc-utilities",
+  "authors": [
+    "Matthis <matthis.perrin@gmail.com>"
+  ],
+  "description": "A collection of utility functions for reuse across all Buttercoin projects",
+  "main": "main.js",
+  "keywords": [
+    "buttercoin",
+    "utility",
+    "functions"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
