@@ -22,7 +22,7 @@
     "assets",
     "test-app"
   ],
-  "dependencies": {
+  "devDependencies": {
     "coffee-script": "~1.6.3"
   }
 }
