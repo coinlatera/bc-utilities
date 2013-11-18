@@ -6,6 +6,8 @@
     <div id="result"></div>
 
     <script>
+
+      // Test `exist` function
       var foo = 1;
       var bar;
       var baz = undefined;
@@ -14,17 +16,37 @@
 
       var result = ''
 
-      function testVariable (variable) {
+      function testVariableExists (variable) {
         result += exist(variable) ? '<span>Exist</span>' : '<span>Doesn\'t exist</span>';
         result += '<br>'
       }
 
-      testVariable(foo);
-      testVariable(bar);
-      testVariable(baz);
-      testVariable(qux);
-      testVariable(banana);
-      testVariable();
+      testVariableExists(foo);
+      testVariableExists(bar);
+      testVariableExists(baz);
+      testVariableExists(qux);
+      testVariableExists(banana);
+      testVariableExists();
+
+
+      // Test `isEmpty` function
+      function testVariableIsEmpty (variable) {
+        result += isEmpty(variable) ? '<span>Empty</span>' : '<span>Not empty</span>';
+        result += '<br>'
+      }
+
+      testVariableIsEmpty(""), // true
+      testVariableIsEmpty([]), // true
+      testVariableIsEmpty({}), // true
+      testVariableIsEmpty({length: 0, custom_property: []}), // true
+
+      testVariableIsEmpty("Hello"), // false
+      testVariableIsEmpty([1,2,3]), // false
+      testVariableIsEmpty({test: 1}), // false
+      testVariableIsEmpty({length: 3, custom_property: [1,2,3]}) // false
+
+
+
 
       document.getElementById('result').innerHTML = result;
 
