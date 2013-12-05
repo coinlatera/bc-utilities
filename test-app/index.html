@@ -46,6 +46,37 @@
       testVariableIsEmpty({length: 3, custom_property: [1,2,3]}) // false
 
 
+      // Test `keyForValue` function
+      function testKeyForValue (value, object) {
+        result += '<span>' + keyForValue(value, object) + '</span>';
+        result += '<br>'
+      }
+
+      var array = ['three', 3];
+      var fn = function () { return 4; };
+      var date = new Date();
+
+      var object = {
+        key1: 'one',
+        key2: 2,
+        key3: array,
+        key4: fn,
+        key5: undefined,
+        key6: null,
+        key7: date
+      };
+
+      testKeyForValue('one', object);
+      testKeyForValue(2, object);
+      testKeyForValue(array, object);
+      testKeyForValue(fn, object);
+      testKeyForValue(undefined, object);
+      testKeyForValue(null, object);
+      testKeyForValue(date, object);
+      testKeyForValue('a', 'salut');
+      testKeyForValue('a', object);
+
+
 
 
       document.getElementById('result').innerHTML = result;

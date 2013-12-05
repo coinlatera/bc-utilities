@@ -38,3 +38,9 @@ root.isEmpty = (obj) ->
     return false if Object.prototype.hasOwnProperty.call(obj,key) 
 
   return true
+
+
+root.keyForValue = (needle, haystack) ->
+  for k,v of haystack
+    return k if v is needle
+  return undefined
