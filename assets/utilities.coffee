@@ -44,3 +44,7 @@ root.keyForValue = (needle, haystack) ->
   for k,v of haystack
     return k if v is needle
   return undefined
+
+
+root.capitalize = (string) ->
+  return string.charAt(0).toUpperCase() + string.slice(1)
