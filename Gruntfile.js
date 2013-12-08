@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     concat: {
       dist: {
         files: {
-          '<%= yeoman.dist %>/bc-utilities-min.js': [
+          '<%= yeoman.dist %>/bc-utilities.js': [
             '.tmp/{,*/}*.js'
           ]
         }
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
       dist: {
         files: {
           '<%= yeoman.dist %>/bc-utilities-min.js': [
-            '<%= yeoman.dist %>/bc-utilities-min.js'
+            '<%= yeoman.dist %>/bc-utilities.js'
           ]
         }
       }

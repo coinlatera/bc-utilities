@@ -6,7 +6,7 @@
     "Matthis <matthis.perrin@gmail.com>"
   ],
   "description": "A collection of utility functions for reuse across all Buttercoin projects",
-  "main": "dist/bc-utilities-min.js",
+  "main": "dist/bc-utilities.js",
   "keywords": [
     "buttercoin",
     "utility",
