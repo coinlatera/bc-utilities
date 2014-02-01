@@ -63,4 +63,16 @@
     return string.charAt(0).toUpperCase() + string.slice(1);
   };
 
+  root.isVisible = function(elem) {
+    var docViewBottom, docViewTop, elemBottom, elemTop;
+    if (!!!$(elem).length) {
+      return false;
+    }
+    docViewTop = $(window).scrollTop();
+    docViewBottom = docViewTop + $(window).height();
+    elemTop = $(elem).offset().top;
+    elemBottom = elemTop + $(elem).height();
+    return (elemBottom <= docViewBottom) && (elemTop >= docViewTop);
+  };
+
 }).call(this);

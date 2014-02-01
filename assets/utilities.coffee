@@ -48,3 +48,12 @@ root.keyForValue = (needle, haystack) ->
 
 root.capitalize = (string) ->
   return string.charAt(0).toUpperCase() + string.slice(1)
+
+
+root.isVisible = (elem) ->
+  return false if not !!$(elem).length
+  docViewTop = $(window).scrollTop()
+  docViewBottom = docViewTop + $(window).height()
+  elemTop = $(elem).offset().top
+  elemBottom = elemTop + $(elem).height()
+  return (elemBottom <= docViewBottom) && (elemTop >= docViewTop)
